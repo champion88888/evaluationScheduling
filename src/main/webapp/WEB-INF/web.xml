@@ -12,6 +12,18 @@
       <param-name>jersey.config.server.provider.packages</param-name>
       <param-value>com.mediaocean.scheduler</param-value>
     </init-param>
+    <init-param>
+      <param-name>com.sun.jersey.config.property.JSPTemplatesBasePath</param-name>
+      <param-value>/</param-value>
+    </init-param>
+    <init-param>
+      <param-name>com.sun.jersey.config.property.WebPageContentRegex</param-name>
+      <param-value>
+        (/(img|js|css|vendor)/?.*)|(/.*.jsp)|(/WEB-INF/.*.jsp)|
+        (/WEB-INF/.*.jspf)|(/.*.html)|(/favicon.ico)|
+        (/robots.txt)
+      </param-value>
+    </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
